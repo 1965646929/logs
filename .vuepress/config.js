@@ -27,7 +27,12 @@ module.exports = {
   plugins: [
     "@vuepress-reco/vuepress-plugin-comments",
     "vuepress-plugin-meting",
-    "@vuepress-reco/vuepress-plugin-kan-ban-niang"
+    [
+      "@vuepress-reco/vuepress-plugin-kan-ban-niang",
+      {
+        theme: ["koharu"]
+      }
+    ]
   ],
   themeConfig: {
     mode: "light",
