@@ -25,12 +25,33 @@ module.exports = {
     ]
   ],
   plugins: [
-    "@vuepress-reco/vuepress-plugin-comments",
-    "vuepress-plugin-meting",
+    ["@vuepress-reco/vuepress-plugin-comments"],
+    ["vuepress-plugin-meting"],
     [
       "@vuepress-reco/vuepress-plugin-kan-ban-niang",
       {
-        theme: ["koharu"]
+        theme: ["koharu"],
+        clean: true
+      }
+    ],
+     // 复制代码功能
+    [
+        "vuepress-plugin-nuggets-style-copy",
+        {
+            copyText: "复制代码",
+            tip: {
+                content: "复制成功!"
+            }
+        }
+    ],
+    [
+      "dynamic-title",
+      {
+        showIcon: "/favicon.ico",
+        showText: "(/≧▽≦/)欢迎帅哥美女！",
+        hideIcon: "/failure.ico",
+        hideText: "(●—●)不要走啊，再看看！",
+        recoverTime: 2000
       }
     ]
   ],
